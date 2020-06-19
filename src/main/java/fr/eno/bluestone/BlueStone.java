@@ -25,7 +25,6 @@ public class BlueStone
 
 	public BlueStone()
 	{
-		LOGGER.debug("BlueStone Setup Started...");
 		IEventBus mod = FMLJavaModLoadingContext.get().getModEventBus();
 		
 		mod.addListener(this::commonSetup);
@@ -33,8 +32,6 @@ public class BlueStone
 		
 		InitBlocks.BLOCKS.register(mod);
 		InitItems.ITEMS.register(mod);
-		
-		LOGGER.debug("BlueStone Setup Finished !");
 	}
 
 	private void commonSetup(final FMLCommonSetupEvent event)
