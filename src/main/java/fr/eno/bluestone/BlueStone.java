@@ -11,7 +11,6 @@ import fr.eno.bluestone.init.InitItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.client.renderer.color.BlockColors;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -21,7 +20,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 @Mod(References.MOD_ID)
 public class BlueStone
 {
-	private static final Logger LOGGER = LogManager.getLogger(References.MOD_NAME);
+	public static final Logger LOGGER = LogManager.getLogger(References.MOD_NAME);
 
 	public BlueStone()
 	{
@@ -36,6 +35,11 @@ public class BlueStone
 
 	private void commonSetup(final FMLCommonSetupEvent event)
 	{
+		Minecraft.getInstance().getBlockColors().register(new BluestoneWireBlock(), InitBlocks.BLUESTONE_WIRE.get());
+	}
+
+	private void clientSetup(final FMLClientSetupEvent event)
+	{
 		Predicate<RenderType> cutoutPredicate = renderType -> renderType == RenderType.getCutout();
 		
 		RenderTypeLookup.setRenderLayer(InitBlocks.BLUESTONE_COMPARATOR.get(), cutoutPredicate);
@@ -44,12 +48,12 @@ public class BlueStone
 		RenderTypeLookup.setRenderLayer(InitBlocks.BLUESTONE_WIRE.get(), cutoutPredicate);
 		RenderTypeLookup.setRenderLayer(InitBlocks.BLUESTONE_TRIPWIRE_HOOK.get(), cutoutPredicate);
 		RenderTypeLookup.setRenderLayer(InitBlocks.BLUESTONE_TRIPWIRE.get(), cutoutPredicate);
-	}
-
-	private void clientSetup(final FMLClientSetupEvent event)
-	{
-		BlockColors colors = Minecraft.getInstance().getBlockColors();
-		
-		colors.register(new BluestoneWireBlock(), InitBlocks.BLUESTONE_WIRE.get());
+		RenderTypeLookup.setRenderLayer(InitBlocks.BLUESTONE_ACACIA_DOOR.get(), cutoutPredicate);
+		RenderTypeLookup.setRenderLayer(InitBlocks.BLUESTONE_BIRCH_DOOR.get(), cutoutPredicate);
+		RenderTypeLookup.setRenderLayer(InitBlocks.BLUESTONE_DARK_OAK_DOOR.get(), cutoutPredicate);
+		RenderTypeLookup.setRenderLayer(InitBlocks.BLUESTONE_JUNGLE_DOOR.get(), cutoutPredicate);
+		RenderTypeLookup.setRenderLayer(InitBlocks.BLUESTONE_SPRUCE_DOOR.get(), cutoutPredicate);
+		RenderTypeLookup.setRenderLayer(InitBlocks.BLUESTONE_OAK_DOOR.get(), cutoutPredicate);
+		RenderTypeLookup.setRenderLayer(InitBlocks.BLUESTONE_IRON_DOOR.get(), cutoutPredicate);
 	}
 }

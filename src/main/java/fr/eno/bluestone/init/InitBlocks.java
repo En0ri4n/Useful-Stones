@@ -4,6 +4,7 @@ import fr.eno.bluestone.References;
 import fr.eno.bluestone.block.BluestoneBlock;
 import fr.eno.bluestone.block.BluestoneButtonBlock;
 import fr.eno.bluestone.block.BluestoneComparatorBlock;
+import fr.eno.bluestone.block.BluestoneDoorBlock;
 import fr.eno.bluestone.block.BluestoneLeverBlock;
 import fr.eno.bluestone.block.BluestonePressurePlateBlock;
 import fr.eno.bluestone.block.BluestoneRepeaterBlock;
@@ -13,7 +14,11 @@ import fr.eno.bluestone.block.BluestoneTripWireHookBlock;
 import fr.eno.bluestone.block.BluestoneWeightedPressurePlateBlock;
 import fr.eno.bluestone.block.BluestoneWireBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.PressurePlateBlock.Sensitivity;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 
@@ -49,4 +54,13 @@ public class InitBlocks
 	public static final RegistryObject<BluestoneTripWireHookBlock> BLUESTONE_TRIPWIRE_HOOK = BLOCKS.register("bluestone_tripwire_hook", () -> new BluestoneTripWireHookBlock());
 	public static final RegistryObject<BluestoneTripWireBlock> BLUESTONE_TRIPWIRE = BLOCKS.register("bluestone_tripwire", () -> new BluestoneTripWireBlock());
 	
+	public static final RegistryObject<BluestoneDoorBlock> BLUESTONE_SPRUCE_DOOR = BLOCKS.register("bluestone_spruce_door", () -> new BluestoneDoorBlock(Block.Properties.create(Material.WOOD, Blocks.SPRUCE_PLANKS.getDefaultState().getMaterial().getColor()).hardnessAndResistance(3.0F).sound(SoundType.WOOD).notSolid()));
+	public static final RegistryObject<BluestoneDoorBlock> BLUESTONE_BIRCH_DOOR = BLOCKS.register("bluestone_birch_door", () -> new BluestoneDoorBlock(Block.Properties.create(Material.WOOD, Blocks.BIRCH_PLANKS.getDefaultState().getMaterial().getColor()).hardnessAndResistance(3.0F).sound(SoundType.WOOD).notSolid()));
+	public static final RegistryObject<BluestoneDoorBlock> BLUESTONE_JUNGLE_DOOR = BLOCKS.register("bluestone_jungle_door", () -> new BluestoneDoorBlock(Block.Properties.create(Material.WOOD, Blocks.JUNGLE_PLANKS.getDefaultState().getMaterial().getColor()).hardnessAndResistance(3.0F).sound(SoundType.WOOD).notSolid()));
+	public static final RegistryObject<BluestoneDoorBlock> BLUESTONE_ACACIA_DOOR = BLOCKS.register("bluestone_acacia_door", () -> new BluestoneDoorBlock(Block.Properties.create(Material.WOOD, Blocks.ACACIA_PLANKS.getDefaultState().getMaterial().getColor()).hardnessAndResistance(3.0F).sound(SoundType.WOOD).notSolid()));
+	public static final RegistryObject<BluestoneDoorBlock> BLUESTONE_DARK_OAK_DOOR = BLOCKS.register("bluestone_dark_oak_door", () -> new BluestoneDoorBlock(Block.Properties.create(Material.WOOD, Blocks.DARK_OAK_PLANKS.getDefaultState().getMaterial().getColor()).hardnessAndResistance(3.0F).sound(SoundType.WOOD).notSolid()));
+	public static final RegistryObject<BluestoneDoorBlock> BLUESTONE_OAK_DOOR = BLOCKS.register("bluestone_oak_door", () -> new BluestoneDoorBlock(Block.Properties.create(Material.WOOD, Blocks.OAK_PLANKS.getDefaultState().getMaterial().getColor()).hardnessAndResistance(3.0F).sound(SoundType.WOOD).notSolid()));
+	public static final RegistryObject<BluestoneDoorBlock> BLUESTONE_IRON_DOOR = BLOCKS.register("bluestone_iron_door", () -> new BluestoneDoorBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(5.0F).sound(SoundType.METAL).notSolid()));
+	   
+	   
 }

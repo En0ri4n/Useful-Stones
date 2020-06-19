@@ -38,4 +38,11 @@ public class InitItems
 	public static final RegistryObject<Item> BLUESTONE_STRING = ITEMS.register("bluestone_string", () -> new ItemBlock(InitBlocks.BLUESTONE_TRIPWIRE.get()));
 	public static final RegistryObject<Item> BLUESTONE_TRIPWIRE_HOOK = ITEMS.register("bluestone_tripwire_hook", () -> new ItemBlock(InitBlocks.BLUESTONE_TRIPWIRE_HOOK.get()));
 
+	public static final RegistryObject<Item> BLUESTONE_OAK_DOOR = ITEMS.register("bluestone_oak_door", () -> new ItemBlock(InitBlocks.BLUESTONE_OAK_DOOR.get()));
+	public static final RegistryObject<Item> BLUESTONE_BIRCH_DOOR = ITEMS.register("bluestone_birch_door", () -> new ItemBlock(InitBlocks.BLUESTONE_BIRCH_DOOR.get()));
+	public static final RegistryObject<Item> BLUESTONE_SPRUCE_DOOR = ITEMS.register("bluestone_spruce_door", () -> new ItemBlock(InitBlocks.BLUESTONE_SPRUCE_DOOR.get()));
+	public static final RegistryObject<Item> BLUESTONE_ACACIA_DOOR = ITEMS.register("bluestone_acacia_door", () -> new ItemBlock(InitBlocks.BLUESTONE_ACACIA_DOOR.get()));
+	public static final RegistryObject<Item> BLUESTONE_DARK_OAK_DOOR = ITEMS.register("bluestone_dark_oak_door", () -> new ItemBlock(InitBlocks.BLUESTONE_DARK_OAK_DOOR.get()));
+	public static final RegistryObject<Item> BLUESTONE_JUNGLE_DOOR = ITEMS.register("bluestone_jungle_door", () -> new ItemBlock(InitBlocks.BLUESTONE_JUNGLE_DOOR.get()));
+	public static final RegistryObject<Item> BLUESTONE_IRON_DOOR = ITEMS.register("bluestone_iron_door", () -> new ItemBlock(InitBlocks.BLUESTONE_IRON_DOOR.get()));
 }

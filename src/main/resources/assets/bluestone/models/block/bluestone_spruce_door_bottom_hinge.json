@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_bottom_rh",
+    "textures": {
+        "bottom": "bluestone:blocks/bluestone_spruce_door_bottom",
+        "top": "bluestone:blocks/bluestone_spruce_door_top"
+    }
+}
