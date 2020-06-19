@@ -8,6 +8,7 @@ import net.minecraft.block.IWaterLoggable;
 import net.minecraft.block.LeverBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.particles.RedstoneParticleData;
@@ -15,8 +16,13 @@ import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer.Builder;
 import net.minecraft.state.properties.AttachFace;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Direction;
+import net.minecraft.util.Hand;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
@@ -31,6 +37,27 @@ public class BluestoneLeverBlock extends LeverBlock implements IWaterLoggable
 	{
 		super(Block.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().hardnessAndResistance(0.5F).sound(SoundType.WOOD));
 		this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).with(POWERED, Boolean.valueOf(false)).with(FACE, AttachFace.WALL).with(WATERLOGGED, Boolean.valueOf(false)));
+	}
+
+	@Override
+	public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit)
+	{
+		if (worldIn.isRemote)
+		{
+			BlockState blockstate1 = state.cycle(POWERED);
+			if (blockstate1.get(POWERED))
+			{
+				addParticles(blockstate1, worldIn, pos, 1.0F);
+			}
+
+			return ActionResultType.SUCCESS;
+		} else
+		{
+			BlockState blockstate = this.func_226939_d_(state, worldIn, pos);
+			float f = blockstate.get(POWERED) ? 0.6F : 0.5F;
+			worldIn.playSound((PlayerEntity) null, pos, SoundEvents.BLOCK_LEVER_CLICK, SoundCategory.BLOCKS, 0.3F, f);
+			return ActionResultType.SUCCESS;
+		}
 	}
 
 	@Override

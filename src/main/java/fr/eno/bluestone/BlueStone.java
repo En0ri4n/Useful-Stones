@@ -45,6 +45,8 @@ public class BlueStone
 		RenderTypeLookup.setRenderLayer(InitBlocks.BLUESTONE_TORCH.get(), cutoutPredicate);
 		RenderTypeLookup.setRenderLayer(InitBlocks.BLUESTONE_REPEATER.get(), cutoutPredicate);
 		RenderTypeLookup.setRenderLayer(InitBlocks.BLUESTONE_WIRE.get(), cutoutPredicate);
+		RenderTypeLookup.setRenderLayer(InitBlocks.BLUESTONE_TRIPWIRE_HOOK.get(), cutoutPredicate);
+		RenderTypeLookup.setRenderLayer(InitBlocks.BLUESTONE_TRIPWIRE.get(), cutoutPredicate);
 	}
 
 	private void clientSetup(final FMLClientSetupEvent event)

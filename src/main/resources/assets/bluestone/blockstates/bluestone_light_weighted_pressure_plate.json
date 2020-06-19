@@ -1,0 +1,20 @@
+{
+    "variants": {
+        "power=0": { "model": "bluestone:block/bluestone_light_weighted_pressure_plate" },
+        "power=1": { "model": "bluestone:block/bluestone_light_weighted_pressure_plate_down" },
+        "power=2": { "model": "bluestone:block/bluestone_light_weighted_pressure_plate_down" },
+        "power=3": { "model": "bluestone:block/bluestone_light_weighted_pressure_plate_down" },
+        "power=4": { "model": "bluestone:block/bluestone_light_weighted_pressure_plate_down" },
+        "power=5": { "model": "bluestone:block/bluestone_light_weighted_pressure_plate_down" },
+        "power=6": { "model": "bluestone:block/bluestone_light_weighted_pressure_plate_down" },
+        "power=7": { "model": "bluestone:block/bluestone_light_weighted_pressure_plate_down" },
+        "power=8": { "model": "bluestone:block/bluestone_light_weighted_pressure_plate_down" },
+        "power=9": { "model": "bluestone:block/bluestone_light_weighted_pressure_plate_down" },
+        "power=10": { "model": "bluestone:block/bluestone_light_weighted_pressure_plate_down" },
+        "power=11": { "model": "bluestone:block/bluestone_light_weighted_pressure_plate_down" },
+        "power=12": { "model": "bluestone:block/bluestone_light_weighted_pressure_plate_down" },
+        "power=13": { "model": "bluestone:block/bluestone_light_weighted_pressure_plate_down" },
+        "power=14": { "model": "bluestone:block/bluestone_light_weighted_pressure_plate_down" },
+        "power=15": { "model": "bluestone:block/bluestone_light_weighted_pressure_plate_down" }
+    }
+}

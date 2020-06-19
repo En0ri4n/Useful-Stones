@@ -80,7 +80,7 @@ public class BluestoneWireBlock extends RedstoneWireBlock implements IWaterLogga
 
 		if (state.get(POWER) > 0)
 		{
-			blue = state.get(POWER) * 255 / 15;
+			blue = 70 + state.get(POWER) * 185 / 15;
 		}
 		return new Color(0, 0, blue).getRGB();
 	}
