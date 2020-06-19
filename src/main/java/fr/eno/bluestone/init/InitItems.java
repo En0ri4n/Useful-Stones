@@ -15,4 +15,6 @@ public class InitItems
 	public static final RegistryObject<Item> BLUESTONE_TORCH = ITEMS.register("bluestone_torch", () -> new ItemBlock(InitBlocks.BLUESTONE_TORCH.get()));
 	public static final RegistryObject<Item> BLUESTONE_BLOCK = ITEMS.register("bluestone_block", () -> new ItemBlock(InitBlocks.BLUESTONE_BLOCK.get()));
 	public static final RegistryObject<Item> BLUESTONE_COMPARATOR = ITEMS.register("bluestone_comparator", () -> new ItemBlock(InitBlocks.BLUESTONE_COMPARATOR.get()));
+	public static final RegistryObject<Item> BLUESTONE_LEVER = ITEMS.register("bluestone_lever", () -> new ItemBlock(InitBlocks.BLUESTONE_LEVER.get()));
+
 }

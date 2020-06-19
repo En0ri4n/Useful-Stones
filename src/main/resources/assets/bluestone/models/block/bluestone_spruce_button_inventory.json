@@ -1,0 +1,6 @@
+{
+    "parent": "block/button_inventory",
+    "textures": {
+        "texture": "bluestone:blocks/bluestone_spruce_planks"
+    }
+}

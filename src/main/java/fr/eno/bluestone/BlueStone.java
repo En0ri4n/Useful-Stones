@@ -5,10 +5,13 @@ import java.util.function.Predicate;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import fr.eno.bluestone.block.BluestoneWireBlock;
 import fr.eno.bluestone.init.InitBlocks;
 import fr.eno.bluestone.init.InitItems;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.client.renderer.color.BlockColors;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -46,6 +49,8 @@ public class BlueStone
 
 	private void clientSetup(final FMLClientSetupEvent event)
 	{
+		BlockColors colors = Minecraft.getInstance().getBlockColors();
 		
+		colors.register(new BluestoneWireBlock(), InitBlocks.BLUESTONE_WIRE.get());
 	}
 }
