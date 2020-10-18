@@ -31,5 +31,7 @@
 	"block.bluestone.bluestone_stone_door": "Bluestone Stone Door",
 	"block.bluestone.bluestone_iron_door": "Bluestone Iron Door",
 	"block.bluestone.bluestone_tripwire": "Bluestone String",
-	"block.bluestone.bluestone_tripwire_hook": "Bluestone Tripwire Hook"
+	"block.bluestone.bluestone_tripwire_hook": "Bluestone Tripwire Hook",
+	"block.bluestone.bluestone_ore": "Bluestone Ore",
+	"block.bluestone.bluestone_infuser": "Bluestone Infuser"
 }
